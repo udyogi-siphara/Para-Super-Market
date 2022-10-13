@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="705.0" prefWidth="1348.0" style="-fx-background-color: #eeeae2;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.para.superMarket.controller.ItemFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="49.0" layoutX="87.0" layoutY="475.0" stroke="#02541c" strokeType="INSIDE" width="238.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="49.0" layoutX="86.0" layoutY="371.0" stroke="#02541c" strokeType="INSIDE" width="238.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="49.0" layoutX="86.0" layoutY="267.0" stroke="#02541c" strokeType="INSIDE" width="238.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="49.0" layoutX="86.0" layoutY="163.0" stroke="#02541c" strokeType="INSIDE" width="238.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="49.0" layoutX="87.0" layoutY="65.0" stroke="#02541c" strokeType="INSIDE" width="238.0" />
+      <Label layoutX="92.0" layoutY="74.0" prefHeight="25.0" prefWidth="110.0" text="Item Code :" textFill="#02541c">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtItmCode" labelFloat="true" layoutX="178.0" layoutY="80.0" prefHeight="25.0" prefWidth="131.0" promptText="Item code" />
+      <Label layoutX="91.0" layoutY="172.0" text="Description :" textFill="#02541c">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtItmDescription" labelFloat="true" layoutX="190.0" layoutY="177.0" onKeyReleased="#textFieldValidationOnAction" prefHeight="25.0" prefWidth="131.0" promptText="Description" />
+      <JFXTextField fx:id="txtItmPackSize" labelFloat="true" layoutX="172.0" layoutY="281.0" onKeyReleased="#textFieldValidationOnAction" prefHeight="25.0" prefWidth="131.0" promptText="Pack size" />
+      <Label layoutX="95.0" layoutY="379.0" text="Unit Price :" textFill="#02541c">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtUnitPrice" labelFloat="true" layoutX="181.0" layoutY="386.0" onKeyReleased="#textFieldValidationOnAction" prefHeight="25.0" prefWidth="131.0" promptText="Unit price" />
+      <Label layoutX="94.0" layoutY="483.0" text="QtyOnHand :" textFill="#02541c">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtItmQtyOnHand" labelFloat="true" layoutX="194.0" layoutY="490.0" onKeyReleased="#textFieldValidationOnAction" prefHeight="25.0" prefWidth="131.0" promptText="Qty on hand" />
+      <Label layoutX="93.0" layoutY="278.0" text="Pack Size :" textFill="#02541c">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="499.0" layoutY="229.0" prefHeight="366.0" prefWidth="628.0" style="-fx-background-color: #ffffff;" />
+      <TableView fx:id="tblItmTable" layoutX="512.0" layoutY="241.0" prefHeight="337.0" prefWidth="605.0">
+         <columns>
+            <TableColumn fx:id="colItmCode" prefWidth="96.33332824707031" text="Item Code" />
+            <TableColumn fx:id="colItmDescription" prefWidth="178.0" text="Description" />
+            <TableColumn fx:id="colItmPackSize" prefWidth="106.0" text="Pack Size" />
+            <TableColumn fx:id="colItmUnitPrice" prefWidth="108.0" text="Unit Price" />
+            <TableColumn fx:id="colItmQtyOnHand" prefWidth="114.0" text="Qty On Hand" />
+         </columns>
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#menuEditOnAction" text="Edit " />
+                  <MenuItem mnemonicParsing="false" onAction="#menuDeleteOnAction" text="Delete" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <JFXButton fx:id="btnAddItem" layoutX="28.0" layoutY="614.0" onAction="#btnAddItem" prefHeight="33.0" prefWidth="166.0" style="-fx-background-color: #0652DD;" text="Add Item" textFill="#FFFFFF">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="215.0" layoutY="614.0" onAction="#btnItemClear" prefHeight="33.0" prefWidth="166.0" style="-fx-background-color: #f71b1b;" text="Clear" textFill="#FFFFFF">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="41.0" layoutX="452.0" layoutY="41.0" stroke="#02541c" strokeType="INSIDE" width="748.0" />
+      <TextField fx:id="txtSearchItem" layoutX="510.0" layoutY="49.0" onKeyReleased="#searchDetailsOnAction" prefHeight="25.0" prefWidth="683.0" />
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="464.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/image/search.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="493.0" layoutY="46.0" orientation="VERTICAL" prefHeight="33.0" prefWidth="3.0" />
+   </children>
+</AnchorPane>

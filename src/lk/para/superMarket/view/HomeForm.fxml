@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="746.0" prefWidth="1392.0" style="-fx-background-color: #eeeae2;" stylesheets="@assets/style/HomeStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.para.superMarket.controller.HomeFormController">
+   <children>
+      <AnchorPane fx:id="icnSideAnchorPane" layoutY="35.0" onMouseEntered="#iconSideOnAction" prefHeight="711.0" prefWidth="43.0" style="-fx-background-color: #e1e1e1;">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="7.0" layoutY="32.0" onMouseClicked="#imgDashBoardOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/image/menu.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="7.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/image/user1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="6.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/image/item.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="8.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/image/report1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="7.0" layoutY="624.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/image/logout.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="6.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/image/cart.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="5.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/image/allOr.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="-2.0" prefHeight="38.0" prefWidth="1393.0" style="-fx-background-color: #e1e1e1;">
+         <children>
+            <Label layoutX="1214.0" layoutY="10.0" text="Time :" textFill="#02541c">
+               <font>
+                  <Font name="Futura Black BT" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="1042.0" layoutY="10.0" text="Date:" textFill="#02541c">
+               <font>
+                  <Font name="Futura Black BT" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" layoutX="1089.0" layoutY="11.0" text="2022-05-22">
+               <font>
+                  <Font name="Futura Black BT" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" layoutX="1269.0" layoutY="11.0" text="02:53:45">
+               <font>
+                  <Font name="Futura Black BT" size="13.0" />
+               </font>
+            </Label>
+            <Text fill="#02541c" layoutX="14.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para Super Market">
+               <font>
+                  <Font name="Futura Black BT" size="17.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="623.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/image/userud.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblUserType" layoutX="661.0" layoutY="11.0" text="User Type" textFill="#02541c">
+               <font>
+                  <Font name="Futura Black BT" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Text fill="#dbe7e0" layoutX="285.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Line endX="1292.0" endY="-7.62939453125E-6" layoutX="100.0" layoutY="36.0" startX="-100.0" stroke="#02541c" />
+      <AnchorPane fx:id="MainAnchorePane" layoutX="44.0" layoutY="39.0" prefHeight="705.0" prefWidth="1348.0" style="-fx-background-color: #eeeae2;" />
+      <AnchorPane fx:id="NameSideAnchorPane" layoutX="43.0" layoutY="37.0" onMouseExited="#NameSideOnAction" prefHeight="711.0" prefWidth="170.0" style="-fx-background-color: #e1e1e1;">
+         <children>
+            <JFXButton id="CustomerButton" fx:id="btnCustomer" layoutX="1.0" layoutY="102.0" onMouseClicked="#btnButtonOnAction" prefHeight="55.0" prefWidth="168.0" styleClass="menuItem" text="Customer">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="ItemButton" fx:id="btnItem" layoutX="1.0" layoutY="157.0" onMouseClicked="#btnButtonOnAction" prefHeight="55.0" prefWidth="168.0" styleClass="menuItem" text="Item">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="OrderButton" fx:id="btnOrder" layoutX="1.0" layoutY="212.0" onMouseClicked="#btnButtonOnAction" prefHeight="55.0" prefWidth="168.0" styleClass="menuItem" text="Order">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="ReportsButton" fx:id="btnReports" layoutX="1.0" layoutY="265.0" onMouseClicked="#btnButtonOnAction" prefHeight="55.0" prefWidth="168.0" styleClass="menuItem" text="Reports">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="LogOutButton" fx:id="btnLogOut" layoutY="611.0" onMouseClicked="#btnButtonOnAction" prefHeight="55.0" prefWidth="170.0" styleClass="menuItem" text="Log out">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="AllOrdersButton" fx:id="btnAllOrders" layoutX="1.0" layoutY="318.0" onMouseClicked="#btnButtonOnAction" prefHeight="55.0" prefWidth="168.0" styleClass="menuItem" text="All Orders">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="apnMain" prefHeight="705.0" prefWidth="1348.0" style="-fx-background-color: #eeeae2;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.para.superMarket.controller.MonthlyReportFormController">
+   <children>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="17.0" layoutY="15.0" onMouseClicked="#backMouseClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/image/down.png" />
+         </image>
+      </ImageView>
+      <LineChart fx:id="chartMonthly" layoutX="88.0" layoutY="62.0" prefHeight="583.0" prefWidth="1169.0" title="Monthly Income">
+         <xAxis>
+            <CategoryAxis label="Month" side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis label="Revenue" side="LEFT" />
+         </yAxis>
+      </LineChart>
+      <JFXTextField fx:id="txtSearchMonth" focusColor="#2aa41d" labelFloat="true" layoutX="156.0" layoutY="18.0" onKeyReleased="#searchMonthOnAction" promptText="Search Month" />
+   </children>
+</AnchorPane>

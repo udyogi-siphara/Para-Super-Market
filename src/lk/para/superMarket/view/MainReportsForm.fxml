@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="apnMain" prefHeight="705.0" prefWidth="1348.0" style="-fx-background-color: #eeeae2;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.para.superMarket.controller.MainReportsFormController">
+   <children>
+      <TableView fx:id="tblMostItem" layoutX="44.0" layoutY="275.0" prefHeight="337.0" prefWidth="608.0">
+         <columns>
+            <TableColumn prefWidth="101.99999237060547" text="Item Code" />
+            <TableColumn prefWidth="122.0" text="Description" />
+            <TableColumn prefWidth="125.0" text="Pack Size" />
+            <TableColumn prefWidth="130.99996948242188" text="Unit Price" />
+            <TableColumn prefWidth="127.0" text="Qty" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tblLeastItem" layoutX="699.0" layoutY="274.0" prefHeight="337.0" prefWidth="608.0">
+         <columns>
+            <TableColumn prefWidth="101.99999237060547" text="Item Code" />
+            <TableColumn prefWidth="122.0" text="Description" />
+            <TableColumn prefWidth="125.0" text="Pack Size" />
+            <TableColumn prefWidth="130.99996948242188" text="Unit Price" />
+            <TableColumn prefWidth="127.0" text="Qty" />
+         </columns>
+      </TableView>
+      <Label layoutX="49.0" layoutY="224.0" text="Most Movable Item">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="701.0" layoutY="224.0" text="Least Movable Item">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton contentDisplay="TOP" layoutX="150.0" layoutY="77.0" onAction="#btnDailyReportOnAction" prefHeight="76.0" prefWidth="235.0" style="-fx-background-color: #218c74;" text="Daily Income Report" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/image/editgraph.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="536.0" layoutY="77.0" onAction="#btnMonthlyReportOnAction" prefHeight="76.0" prefWidth="235.0" style="-fx-background-color: #218c74;" text="Monthly Income Report" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/image/editgraph.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnAnually" contentDisplay="TOP" layoutX="931.0" layoutY="77.0" onAction="#btnAnuallyReportOnAction" prefHeight="76.0" prefWidth="235.0" style="-fx-background-color: #218c74;" text="Annually Income Report" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/image/editgraph.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>

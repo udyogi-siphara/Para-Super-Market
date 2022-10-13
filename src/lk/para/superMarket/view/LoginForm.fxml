@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="MainAnchorePane" prefHeight="393.0" prefWidth="339.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.para.superMarket.controller.LoginFormController">
+   <children>
+      <AnchorPane layoutY="-49.0" prefHeight="217.0" prefWidth="339.0" style="-fx-background-radius: 50px; -fx-background-color: #6ab04c;">
+         <children>
+            <Text layoutX="130.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+               <font>
+                  <Font name="Andalus" size="35.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="84.0" fitWidth="80.0" layoutX="130.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/image/lockUd.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="28.0" layoutY="205.0" text="User Name :">
+         <font>
+            <Font name="Symbol" size="12.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtUserName" focusColor="#6ab04c" layoutX="96.0" layoutY="201.0" onKeyReleased="#textFieldValidationOnAction" prefHeight="25.0" prefWidth="177.0" />
+      <Label layoutX="28.0" layoutY="249.0" text="Password   :">
+         <font>
+            <Font name="Symbol" size="12.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbSelectType" focusColor="#6ab04c" layoutX="97.0" layoutY="289.0" prefHeight="25.0" prefWidth="177.0" />
+      <Label layoutX="25.0" layoutY="295.0" text="Select Type :">
+         <font>
+            <Font name="Symbol" size="12.0" />
+         </font>
+      </Label>
+      <JFXPasswordField fx:id="pwdPassword" focusColor="#6ab04c" layoutX="96.0" layoutY="242.0" onKeyReleased="#passwordFieldValidationOnAction" prefHeight="25.0" prefWidth="177.0" />
+      <JFXButton fx:id="btnLogin" layoutX="120.0" layoutY="338.0" onAction="#btnLoginOnAction" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #6ab04c; -fx-background-radius: 15px;" text="Login " textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtPassword" focusColor="#6ab04c" layoutX="97.0" layoutY="242.0" prefHeight="25.0" prefWidth="177.0" style="-fx-prompt-text-fill: #6ab04c; -fx-text-fill: #6ab04c;" unFocusColor="BLACK" />
+      <FontAwesomeIconView fx:id="icnEye" fill="#6ab04c" glyphName="EYE_SLASH" layoutX="276.0" layoutY="278.0" onMouseClicked="#eyeClickOnAction" size="20" wrappingWidth="20.0" />
+   </children>
+</AnchorPane>

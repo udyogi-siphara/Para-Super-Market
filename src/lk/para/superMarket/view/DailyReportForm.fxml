@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="apnMain" prefHeight="705.0" prefWidth="1348.0" style="-fx-background-color: #eeeae2;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.para.superMarket.controller.DailyReportFormController">
+   <children>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="20.0" layoutY="14.0" onMouseClicked="#backMouseClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/image/down.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eeeae2" height="34.0" layoutX="236.0" layoutY="46.0" stroke="#079992" strokeType="INSIDE" width="208.0" />
+      <TextField fx:id="txtSearchYear" layoutX="290.0" layoutY="51.0" onKeyReleased="#searchYearKeyReleased" prefHeight="25.0" prefWidth="141.0" promptText="year" style="-fx-background-color: #eeeae2;" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eeeae2" height="34.0" layoutX="558.0" layoutY="46.0" stroke="#079992" strokeType="INSIDE" width="208.0" />
+      <Label layoutX="178.0" layoutY="55.0" prefHeight="21.0" prefWidth="46.0" text="Year ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="493.0" layoutY="55.0" prefHeight="21.0" prefWidth="51.0" text="Month">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="244.0" layoutY="48.0" text="ex :">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbSelectMonth" layoutX="571.0" layoutY="51.0" prefHeight="25.0" prefWidth="167.0" promptText="Select month" style="-fx-background-color: #eeeae2;" />
+      <TableView fx:id="tblDailyView" layoutX="128.0" layoutY="186.0" prefHeight="427.0" prefWidth="1095.0">
+        <columns>
+          <TableColumn prefWidth="127.0" text="Oder Date " />
+          <TableColumn prefWidth="164.33334350585938" text="Item Code" />
+            <TableColumn prefWidth="210.3333740234375" text="Description" />
+            <TableColumn prefWidth="172.33331298828125" text="Unit Price" />
+            <TableColumn prefWidth="138.3333740234375" text="Order Qty" />
+            <TableColumn prefWidth="138.3333740234375" text="Discount " />
+            <TableColumn prefWidth="138.3333740234375" text="Total" />
+        </columns>
+      </TableView>
+      <Label layoutX="1041.0" layoutY="641.0" text="TOTAL :">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="1131.0" layoutY="643.0" text="0000.00" textFill="#cd0f0f">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

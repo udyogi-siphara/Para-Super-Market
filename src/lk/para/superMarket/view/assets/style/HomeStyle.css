@@ -1,0 +1,24 @@
+
+.button{
+    -fx-prompt-text-fill: #000000;
+    /*-fx-border-color: #b5dff5;*/
+    -fx-background-color: #FFFFFF;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+    -fx-text-fill: #000000;
+}
+
+.button:hover{
+    /*-fx-background-color:-fx-secondary;*/
+    /*-fx-text-fill: -fx-primary;*/
+}
+.menuItem{
+    /*-fx-background-color: #4b7bec;*/
+    -fx-border-color:  #edf6fa;
+    -fx-border-width: 5px 0px 5px 0px;
+}
+.menuItem:hover{
+    -fx-background-color: #7bed9f;
+    -fx-border-color: #009432;
+    -fx-border-width: 0px 5px 0px 0px;
+}
